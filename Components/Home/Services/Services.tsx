@@ -82,14 +82,6 @@ const Services = () => {
             </div>
           ))}
         </div>
-
-        <div className="text-center mt-12">
-          <Link href="/services">
-            <button className="bg-blue-950 hover:bg-blue-900 text-white px-8 py-3 rounded-lg text-lg font-medium transition-colors duration-300">
-              View All Services
-            </button>
-          </Link>
-        </div>
       </div>
     </div>
   );
