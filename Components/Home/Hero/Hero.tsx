@@ -22,10 +22,10 @@ const Hero = () => {
             <div className='absolute z-[100] w-full h-full top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center text-white'>
                 <div className='flex items-center justify-center flex-col w-full h-full'>
                     <div>
-                        <h1 className='text-white font-bold uppercase text-[35px] mb-6 md:mb-4 text-center md:text-[45px] lg:text-[55px]'>
-                            Professional CCTV Solutions
+                        <h1 className='text-white font-bold uppercase text-[28px] mb-6 md:mb-4 text-center md:text-[35px] lg:text-[42px]'>
+                            ACE Tech Security Solutions
                         </h1>
-                        <p className='md:text-lg text-center text-xl text-white font-normal [word-spacing:5px] mb-8 max-w-3xl mx-auto leading-relaxed'>
+                        <p className='md:text-lg text-center text-lg text-white font-normal [word-spacing:5px] mb-8 max-w-3xl mx-auto leading-relaxed'>
                             Secure your property with our expert CCTV installation, maintenance, and monitoring services. 
                             Trusted by 1000+ customers across all 36 states in Nigeria with 8+ years of experience.
                         </p>
