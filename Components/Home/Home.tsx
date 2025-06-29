@@ -29,33 +29,16 @@ const Home = () => {
     
     return (
         <div className='overflow-hidden'>
-           <section id="home">
-               <Hero/>
-           </section>
-           <section id="about">
-               <About/>
-           </section>
-           <section id="services">
-               <Services/>
-           </section>
-           <section id="portfolio">
-               <Portfolio/>
-           </section>
-           <section id="testimonials">
-               <Testimonials/>
-           </section>
-           <section id="shop">
-               <Shop/>
-           </section>
-           <section id="blog">
-               <Blog/>
-           </section>
-           <section id="faq">
-               <FAQ/>
-           </section>
-           <section id="contact">
-               <Contact/>
-           </section>
+           <Hero/>
+           <TypeOfCam/>
+           <About/>
+           <Services/>
+           <Portfolio/>
+           <Testimonials/>
+           <Shop/>
+           <Blog/>
+           <FAQ/>
+           <Contact/>
         </div>
     )
 }
