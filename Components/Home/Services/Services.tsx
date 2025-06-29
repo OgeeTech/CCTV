@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import { FaVideo, FaTools, FaUpload, FaDesktop, FaDoorOpen, FaShieldAlt } from 'react-icons/fa';
+import { FaVideo, FaTools, FaUpload, FaDesktop } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Services = () => {
   const services = [
@@ -8,49 +9,29 @@ const Services = () => {
       id: 1,
       icon: <FaVideo className="text-3xl text-rose-600" />,
       title: "CCTV Installation",
-      description: "Professional installation of security cameras for homes, offices, and industrial facilities with optimal positioning and coverage.",
-      features: ["Home Security Systems", "Office Surveillance", "Industrial Monitoring", "Wireless & Wired Options"],
+      description: "Professional installation of security cameras for homes, offices, and industrial facilities.",
       image: "https://images.pexels.com/photos/96612/pexels-photo-96612.jpeg"
     },
     {
       id: 2,
       icon: <FaTools className="text-3xl text-rose-600" />,
-      title: "Maintenance & Troubleshooting",
-      description: "Regular maintenance services and quick troubleshooting to ensure your security systems operate at peak performance.",
-      features: ["Regular System Checkups", "Quick Repairs", "Performance Optimization", "Emergency Support"],
+      title: "Maintenance & Support",
+      description: "Regular maintenance services and quick troubleshooting to ensure peak performance.",
       image: "https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg"
     },
     {
       id: 3,
       icon: <FaUpload className="text-3xl text-rose-600" />,
       title: "System Upgrades",
-      description: "Upgrade your existing analog systems to modern IP cameras with enhanced features and better image quality.",
-      features: ["Analog to IP Conversion", "HD Camera Upgrades", "Storage Expansion", "Feature Enhancement"],
+      description: "Upgrade your existing analog systems to modern IP cameras with enhanced features.",
       image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg"
     },
     {
       id: 4,
       icon: <FaDesktop className="text-3xl text-rose-600" />,
-      title: "Remote Monitoring Setup",
-      description: "Configure remote access to your security systems, allowing you to monitor your property from anywhere in the world.",
-      features: ["Mobile App Setup", "Cloud Storage", "Real-time Alerts", "Multi-device Access"],
+      title: "Remote Monitoring",
+      description: "Configure remote access to monitor your property from anywhere in the world.",
       image: "https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg"
-    },
-    {
-      id: 5,
-      icon: <FaDoorOpen className="text-3xl text-rose-600" />,
-      title: "Intercom & Access Control",
-      description: "Install and configure intercom systems and access control solutions for enhanced security and convenience.",
-      features: ["Video Intercoms", "Keycard Systems", "Biometric Access", "Remote Door Control"],
-      image: "https://images.pexels.com/photos/7005538/pexels-photo-7005538.jpeg"
-    },
-    {
-      id: 6,
-      icon: <FaShieldAlt className="text-3xl text-rose-600" />,
-      title: "Alarm Systems Integration",
-      description: "Integrate alarm systems with your CCTV setup for comprehensive security coverage and automated responses.",
-      features: ["Motion Detection", "Intrusion Alerts", "Fire Alarms", "Emergency Response"],
-      image: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg"
     }
   ];
 
@@ -61,13 +42,12 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">
             Our Professional Services
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Comprehensive security solutions tailored to meet your specific needs with 
-            professional installation and ongoing support.
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Comprehensive security solutions tailored to meet your specific needs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div 
               key={service.id} 
@@ -90,29 +70,24 @@ const Services = () => {
               
               <div className="p-6">
                 <h3 className="text-xl font-bold text-blue-950 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
+                <p className="text-gray-600 mb-4 leading-relaxed text-sm">{service.description}</p>
                 
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-700">
-                      <div className="w-2 h-2 bg-rose-600 rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className="w-full bg-rose-600 hover:bg-rose-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
-                  Learn More
-                </button>
+                <Link href="/services">
+                  <button className="w-full bg-rose-600 hover:bg-rose-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-blue-950 hover:bg-blue-900 text-white px-8 py-3 rounded-lg text-lg font-medium transition-colors duration-300">
-            Get Free Consultation
-          </button>
+          <Link href="/services">
+            <button className="bg-blue-950 hover:bg-blue-900 text-white px-8 py-3 rounded-lg text-lg font-medium transition-colors duration-300">
+              View All Services
+            </button>
+          </Link>
         </div>
       </div>
     </div>

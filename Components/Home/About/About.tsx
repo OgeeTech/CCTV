@@ -14,9 +14,7 @@ const About = () => {
     "Bwari, Abuja",
     "Gwarinpa, Abuja", 
     "Kubwa, Abuja",
-    "Kuje, Abuja",
-    "Gwagwalada, Abuja",
-    "Abaji, Abuja"
+    "Kuje, Abuja"
   ];
 
   return (
@@ -26,9 +24,8 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">
             About Amiable CCTV
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            With over 8 years of experience in security systems installation and maintenance, 
-            we are your trusted partner for comprehensive surveillance solutions.
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Your trusted partner for comprehensive surveillance solutions with over 8 years of experience.
           </p>
         </div>
 
@@ -40,36 +37,36 @@ const About = () => {
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
               We specialize in providing cutting-edge CCTV installation, maintenance, and security 
-              system solutions for homes, offices, and industrial facilities across Abuja and 
-              surrounding areas. Our team of certified technicians ensures your property is 
-              protected with the latest surveillance technology.
+              system solutions for homes, offices, and industrial facilities across Abuja.
             </p>
             
-            <div className="mb-8">
-              <h4 className="text-xl font-semibold text-blue-950 mb-4">Our Certifications</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <FaCertificate className="text-rose-600 text-sm" />
-                    <span className="text-gray-700 text-sm">{cert}</span>
-                  </div>
-                ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <div>
+                <h4 className="text-lg font-semibold text-blue-950 mb-3">Certifications</h4>
+                <div className="space-y-2">
+                  {certifications.slice(0, 2).map((cert, index) => (
+                    <div key={index} className="flex items-center space-x-2">
+                      <FaCertificate className="text-rose-600 text-sm" />
+                      <span className="text-gray-700 text-sm">{cert}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="text-lg font-semibold text-blue-950 mb-3">Service Areas</h4>
+                <div className="space-y-2">
+                  {serviceAreas.map((area, index) => (
+                    <div key={index} className="flex items-center space-x-2">
+                      <FaMapMarkerAlt className="text-rose-600 text-sm" />
+                      <span className="text-gray-700 text-sm">{area}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
-            <div className="mb-8">
-              <h4 className="text-xl font-semibold text-blue-950 mb-4">Service Coverage Areas</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {serviceAreas.map((area, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <FaMapMarkerAlt className="text-rose-600 text-sm" />
-                    <span className="text-gray-700 text-sm">{area}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-6">
               <div className="text-center">
                 <h5 className="text-2xl font-bold text-rose-600">500+</h5>
                 <p className="text-gray-600 text-sm">Projects Completed</p>
@@ -87,7 +84,7 @@ const About = () => {
 
           {/* Right Image */}
           <div data-aos="fade-left" className="relative">
-            <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg"
                 alt="Professional CCTV Technician"
