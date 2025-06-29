@@ -12,12 +12,12 @@ const font = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Amiable CCTV - Professional Security Camera Installation in Abuja",
+  title: "ACE Tech. Consult Ltd - Professional Security Camera Installation in Abuja",
   description: "Professional CCTV installation, maintenance, and security solutions in Abuja. Expert technicians, quality equipment, 24/7 support. Secure your property today!",
   keywords: "CCTV installation Abuja, security cameras Nigeria, surveillance systems, IP cameras, DVR installation, security solutions",
-  authors: [{ name: "Amiable CCTV" }],
+  authors: [{ name: "ACE Tech. Consult Ltd" }],
   openGraph: {
-    title: "Amiable CCTV - Professional Security Solutions",
+    title: "ACE Tech. Consult Ltd - Professional Security Solutions",
     description: "Expert CCTV installation and security services in Abuja",
     type: "website",
   }

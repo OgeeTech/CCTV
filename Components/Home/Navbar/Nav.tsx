@@ -30,7 +30,7 @@ const Nav = ({ openNav }: Props) => {
                     <div className="w-10 h-10 bg-rose-500 rounded-full flex items-center justify-center flex-col">
                         <AiOutlineVideoCamera className='w-6 h-6 text-white' />
                     </div>
-                    <h1 className="text-xl md:text-2xl text-white uppercase font-bold">Amiable</h1>
+                    <h1 className="text-xl md:text-2xl text-white uppercase font-bold">ACE Tech</h1>
                 </div>
 
                 {/* Nav links */}

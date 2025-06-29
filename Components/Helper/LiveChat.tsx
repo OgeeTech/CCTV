@@ -9,12 +9,11 @@ const LiveChat = () => {
     setIsOpen(!isOpen);
   };
 
-  const whatsappNumber = "+2348031234567";
+  const whatsappLink = "https://wa.me/qr/GL5V3VBV5SZLG1";
   const whatsappMessage = "Hello! I'm interested in your CCTV services. Can you help me?";
 
   const openWhatsApp = () => {
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(url, '_blank');
+    window.open(whatsappLink, '_blank');
   };
 
   return (
@@ -40,7 +39,7 @@ const LiveChat = () => {
                 </p>
               </div>
               <div className="text-xs text-gray-500">
-                Amiable CCTV Team • Online now
+                ACE Tech Team • Online now
               </div>
             </div>
             
@@ -82,7 +81,7 @@ const LiveChat = () => {
 
       {/* WhatsApp Floating Button */}
       <a
-        href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+        href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-20 right-4 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 z-[999]"

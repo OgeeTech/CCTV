@@ -121,13 +121,13 @@ const FAQ = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+2348031234567"
+                  href="tel:+2348060610584"
                   className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   Call Us Now
                 </a>
                 <a
-                  href="https://wa.me/2348031234567"
+                  href="https://wa.me/qr/GL5V3VBV5SZLG1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"

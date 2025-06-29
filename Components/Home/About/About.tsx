@@ -22,7 +22,7 @@ const About = () => {
       <div className="w-[90%] xl:w-[80%] mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">
-            About Amiable CCTV
+            About ACE Tech. Consult Ltd
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Your trusted partner for comprehensive surveillance solutions with over 8 years of experience.
