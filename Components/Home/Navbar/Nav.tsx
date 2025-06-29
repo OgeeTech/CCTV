@@ -4,7 +4,7 @@ import { AiOutlineVideoCamera } from 'react-icons/ai';
 import { navLinks } from '@/constant/constant'
 import { HiBars3BottomRight } from 'react-icons/hi2'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 
 type Props = {
     openNav: () => void
@@ -13,6 +13,7 @@ type Props = {
 const Nav = ({ openNav }: Props) => {
     const [navBg, setNavBg] = useState(false);
     const router = useRouter();
+    const pathname = usePathname();
 
     useEffect(() => {
         const handler = () => {
@@ -25,10 +26,16 @@ const Nav = ({ openNav }: Props) => {
 
     const handleNavClick = (url: string) => {
         if (url.startsWith('#')) {
-            // For anchor links, scroll to the section
-            const element = document.querySelector(url);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+            // For anchor links, check if we're on the home page
+            if (pathname === '/') {
+                // We're on home page, scroll to section
+                const element = document.querySelector(url);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                // We're on a different page, navigate to home page with hash
+                router.push(`/${url}`);
             }
         } else {
             // For page links, navigate to the page
@@ -48,15 +55,22 @@ const Nav = ({ openNav }: Props) => {
                 </Link>
 
                 {/* Nav links */}
-                <div className="hidden lg:flex items-center space-x-10">
+                <div className="hidden lg:flex items-center space-x-8">
                     {navLinks.map((link) => {
+                        const isActive = (link.url.startsWith('#') && pathname === '/') || 
+                                       (!link.url.startsWith('#') && pathname === link.url);
+                        
                         return (
                             <button
                                 key={link.id}
                                 onClick={() => handleNavClick(link.url)}
-                                className='relative text-white text-base font-large w-fit block after:block after:content-[""]
-                            after:absolute after:h-[3px] after:bg-yellow-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition duration-300 after:origin-right
-                            cursor-pointer hover:text-yellow-300 transition-colors duration-300'
+                                className={`relative text-base font-medium w-fit block after:block after:content-[""]
+                            after:absolute after:h-[3px] after:bg-yellow-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition duration-300 after:origin-left
+                            cursor-pointer transition-colors duration-300 ${
+                                isActive 
+                                    ? 'text-yellow-300 after:scale-x-100' 
+                                    : 'text-white hover:text-yellow-300'
+                            }`}
                             >
                                 {link.label}
                             </button>
@@ -68,7 +82,7 @@ const Nav = ({ openNav }: Props) => {
                 <div className="flex items-center space-x-4">
                     <button 
                         onClick={() => handleNavClick('#contact')}
-                        className="md:px-12 md:py-2.5 px-8 py-2 text-black text-base bg-white hover:bg-gray-200 transition-all duration-200 rounded-lg"
+                        className="md:px-12 md:py-2.5 px-8 py-2 text-black text-base bg-white hover:bg-gray-200 transition-all duration-200 rounded-lg font-medium"
                     >
                         Hire Us
                     </button>
