@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
