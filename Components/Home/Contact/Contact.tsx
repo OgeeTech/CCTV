@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaClock, FaPaperPlane } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaWhatsapp, FaClock, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -42,24 +42,6 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    {
-      icon: <FaPhone className="text-2xl text-rose-600" />,
-      title: "Phone Number",
-      details: ["+234 806 061 0584"],
-      action: "tel:+2348060610584"
-    },
-    {
-      icon: <FaWhatsapp className="text-2xl text-green-500" />,
-      title: "WhatsApp",
-      details: ["+234 806 061 0584"],
-      action: "https://wa.me/qr/GL5V3VBV5SZLG1"
-    },
-    {
-      icon: <FaEnvelope className="text-2xl text-blue-600" />,
-      title: "Email Address",
-      details: ["juliusabiroh@gmail.com"],
-      action: "mailto:juliusabiroh@gmail.com"
-    },
     {
       icon: <FaMapMarkerAlt className="text-2xl text-red-600" />,
       title: "Headquarters",
@@ -131,13 +113,6 @@ const Contact = () => {
 
             {/* Quick Action Buttons */}
             <div className="mt-8 space-y-4">
-              <a
-                href="tel:+2348060610584"
-                className="flex items-center justify-center w-full bg-rose-600 hover:bg-rose-700 text-white py-3 px-6 rounded-lg transition-colors duration-300"
-              >
-                <FaPhone className="mr-2" />
-                Call Now
-              </a>
               <a
                 href="https://wa.me/qr/GL5V3VBV5SZLG1"
                 target="_blank"
