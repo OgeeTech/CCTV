@@ -1,52 +1,52 @@
-// Static Data
+// Static Data for CCTV Types
 export const destinationData = [
     {
         id: 1,
-        image: "/images/d1.jpg",
-        country: "France",
-        travelers: "150,000",
+        image: "https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg",
+        country: "Dome Cameras",
+        travelers: "Indoor/Outdoor",
     },
     {
         id: 2,
-        image: "/images/d2.jpg",
-        country: "USA",
-        travelers: "250,000",
+        image: "https://images.pexels.com/photos/96612/pexels-photo-96612.jpeg",
+        country: "Bullet Cameras",
+        travelers: "Long Range",
     },
     {
         id: 3,
-        image: "/images/d3.jpg",
-        country: "Italy",
-        travelers: "180,000",
+        image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg",
+        country: "PTZ Cameras",
+        travelers: "Pan/Tilt/Zoom",
     },
     {
         id: 4,
-        image: "/images/d4.jpg",
-        country: "Japan",
-        travelers: "200,000",
+        image: "https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg",
+        country: "IP Cameras",
+        travelers: "Network Based",
     },
     {
         id: 5,
-        image: "/images/d5.jpg",
-        country: "Australia",
-        travelers: "120,000",
+        image: "https://images.pexels.com/photos/7005538/pexels-photo-7005538.jpeg",
+        country: "Wireless Cameras",
+        travelers: "Easy Install",
     },
     {
         id: 6,
-        image: "/images/d6.jpg",
-        country: "Canada",
-        travelers: "175,000",
+        image: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg",
+        country: "Night Vision",
+        travelers: "24/7 Monitoring",
     },
     {
         id: 7,
-        image: "/images/d7.jpg",
-        country: "Germany",
-        travelers: "160,000",
+        image: "https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg",
+        country: "Hidden Cameras",
+        travelers: "Discreet Security",
     },
     {
         id: 8,
-        image: "/images/d8.jpg",
-        country: "Brazil",
-        travelers: "140,000",
+        image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
+        country: "4K Ultra HD",
+        travelers: "Crystal Clear",
     },
 ];
 
@@ -190,7 +190,7 @@ export const reviewData = [
         id: 8,
         name: "Sophia White",
         review:
-            "Five-star service from start to finish! The dedication and skill of the team made all the difference. Truly an exceptional experience I won’t forget.",
+            "Five-star service from start to finish! The dedication and skill of the team made all the difference. Truly an exceptional experience I won't forget.",
         image: "/images/u2.jpg",
     },
 ];

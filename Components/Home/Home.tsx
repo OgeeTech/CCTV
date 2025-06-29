@@ -2,10 +2,16 @@
 import React, { useEffect } from 'react'
 import Hero from './Hero/Hero'
 import TypeOfCam from './TypesOfCam/TypesOfCam'
+import About from './About/About'
+import Services from './Services/Services'
+import Portfolio from './Portfolio/Portfolio'
+import Testimonials from './Testimonials/Testimonials'
+import FAQ from './FAQ/FAQ'
+import Contact from './Contact/Contact'
+import Shop from './Shop/Shop'
+import Blog from './Blog/Blog'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
-
-// import Destination from './Destination/Destination'
 
 const Home = () => {
     useEffect(() => {
@@ -20,10 +26,19 @@ const Home = () => {
         }
         initAOS()
     }, []);
+    
     return (
-        <div className='overflow-hidden '>
+        <div className='overflow-hidden'>
            <Hero/>
-            <TypeOfCam/>
+           <TypeOfCam/>
+           <About/>
+           <Services/>
+           <Portfolio/>
+           <Testimonials/>
+           <Shop/>
+           <Blog/>
+           <FAQ/>
+           <Contact/>
         </div>
     )
 }

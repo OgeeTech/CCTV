@@ -1,28 +1,26 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-// import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 import ResponsiveNav from '@/Components/Home/Navbar/ResponsiveNav'
+import ScrollToTop from '@/Components/Helper/ScrollToTop'
+import LiveChat from '@/Components/Helper/LiveChat'
+import StickyButtons from '@/Components/Helper/StickyButtons'
 
 const font = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin']
 })
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
 export const metadata: Metadata = {
-  title: "Amiable cctv",
-  description: "amiable landing page",
+  title: "Amiable CCTV - Professional Security Camera Installation in Abuja",
+  description: "Professional CCTV installation, maintenance, and security solutions in Abuja. Expert technicians, quality equipment, 24/7 support. Secure your property today!",
+  keywords: "CCTV installation Abuja, security cameras Nigeria, surveillance systems, IP cameras, DVR installation, security solutions",
+  authors: [{ name: "Amiable CCTV" }],
+  openGraph: {
+    title: "Amiable CCTV - Professional Security Solutions",
+    description: "Expert CCTV installation and security services in Abuja",
+    type: "website",
+  }
 };
 
 export default function RootLayout({
@@ -32,10 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} antialiased`} >
+      <body className={`${font.className} antialiased`}>
         <ResponsiveNav/>
         {children}
-
+        <ScrollToTop/>
+        <LiveChat/>
+        <StickyButtons/>
       </body>
     </html>
   );
