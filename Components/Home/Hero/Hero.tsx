@@ -2,6 +2,20 @@
 import React from 'react';
 
 const Hero = () => {
+    const scrollToContact = () => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const scrollToPortfolio = () => {
+        const portfolioSection = document.getElementById('portfolio');
+        if (portfolioSection) {
+            portfolioSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className='relative w-full h-[120vh] sm:h-[100vh]'>
             {/* overlay */}
@@ -32,10 +46,16 @@ const Hero = () => {
                         
                         {/* Call-to-Action Buttons */}
                         <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-                            <button className='bg-rose-600 hover:bg-rose-700 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl'>
+                            <button 
+                                onClick={scrollToContact}
+                                className='bg-rose-600 hover:bg-rose-700 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl'
+                            >
                                 Get Free Consultation
                             </button>
-                            <button className='border-2 border-white text-white hover:bg-white hover:text-blue-950 font-medium px-8 py-4 rounded-xl transition-all duration-300'>
+                            <button 
+                                onClick={scrollToPortfolio}
+                                className='border-2 border-white text-white hover:bg-white hover:text-blue-950 font-medium px-8 py-4 rounded-xl transition-all duration-300'
+                            >
                                 View Our Work
                             </button>
                         </div>
