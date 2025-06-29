@@ -8,6 +8,8 @@ import Portfolio from './Portfolio/Portfolio'
 import Testimonials from './Testimonials/Testimonials'
 import FAQ from './FAQ/FAQ'
 import Contact from './Contact/Contact'
+import Shop from './Shop/Shop'
+import Blog from './Blog/Blog'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
@@ -27,14 +29,34 @@ const Home = () => {
     
     return (
         <div className='overflow-hidden'>
-           <Hero/>
+           <section id="home">
+               <Hero/>
+           </section>
            <TypeOfCam/>
-           <About/>
-           <Services/>
-           <Portfolio/>
-           <Testimonials/>
-           <FAQ/>
-           <Contact/>
+           <section id="about">
+               <About/>
+           </section>
+           <section id="services">
+               <Services/>
+           </section>
+           <section id="portfolio">
+               <Portfolio/>
+           </section>
+           <section id="testimonials">
+               <Testimonials/>
+           </section>
+           <section id="shop">
+               <Shop/>
+           </section>
+           <section id="blog">
+               <Blog/>
+           </section>
+           <section id="faq">
+               <FAQ/>
+           </section>
+           <section id="contact">
+               <Contact/>
+           </section>
         </div>
     )
 }
