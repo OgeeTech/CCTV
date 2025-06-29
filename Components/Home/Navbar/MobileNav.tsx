@@ -64,9 +64,9 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
                                 onClick={() => handleNavClick(link.url)}
                                 className={`text-left w-fit text-[20px] ml-12 sm:text-[30px] transition-colors duration-300 relative ${
                                     isActive 
-                                        ? 'text-yellow-300' 
-                                        : 'text-white hover:text-yellow-300'
-                                } after:content-[""] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 ${
+                                        ? 'text-rose-200' 
+                                        : 'text-white hover:text-rose-200'
+                                } after:content-[""] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-rose-200 after:transition-all after:duration-300 ${
                                     isActive 
                                         ? 'after:w-full' 
                                         : 'after:w-0 hover:after:w-full'
@@ -77,7 +77,7 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
                         );
                     })}
                     {/* close button */}
-                    <CgClose onClick={closeNav} className='absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8 w-6 h-6 cursor-pointer hover:text-yellow-300 transition-colors duration-300' />
+                    <CgClose onClick={closeNav} className='absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8 w-6 h-6 cursor-pointer hover:text-rose-200 transition-colors duration-300' />
                 </div>
             </div>
         </div>

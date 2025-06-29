@@ -108,9 +108,9 @@ const Nav = ({ openNav }: Props) => {
                                 onClick={() => handleNavClick(link.url)}
                                 className={`relative text-base font-medium cursor-pointer transition-colors duration-300 ${
                                     isActive 
-                                        ? 'text-yellow-300' 
-                                        : 'text-white hover:text-yellow-300'
-                                } after:content-[""] after:absolute after:left-0 after:bottom-[-4px] after:h-[3px] after:bg-yellow-300 after:transition-all after:duration-300 ${
+                                        ? 'text-rose-400' 
+                                        : 'text-white hover:text-rose-400'
+                                } after:content-[""] after:absolute after:left-0 after:bottom-[-4px] after:h-[3px] after:bg-rose-400 after:transition-all after:duration-300 ${
                                     isActive 
                                         ? 'after:w-full' 
                                         : 'after:w-0 hover:after:w-full'
