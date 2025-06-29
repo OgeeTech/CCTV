@@ -8,7 +8,6 @@ import Portfolio from './Portfolio/Portfolio'
 import Testimonials from './Testimonials/Testimonials'
 import FAQ from './FAQ/FAQ'
 import Contact from './Contact/Contact'
-import Blog from './Blog/Blog'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
@@ -34,7 +33,6 @@ const Home = () => {
            <Services/>
            <Portfolio/>
            <Testimonials/>
-           <Blog/>
            <FAQ/>
            <Contact/>
         </div>
