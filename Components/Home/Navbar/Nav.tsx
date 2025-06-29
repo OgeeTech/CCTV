@@ -12,6 +12,7 @@ type Props = {
 
 const Nav = ({ openNav }: Props) => {
     const [navBg, setNavBg] = useState(false);
+    const [activeSection, setActiveSection] = useState('home');
     const router = useRouter();
     const pathname = usePathname();
 
@@ -23,6 +24,34 @@ const Nav = ({ openNav }: Props) => {
         window.addEventListener('scroll', handler);
         return () => window.removeEventListener('scroll', handler);
     }, []);
+
+    // Track active section on home page
+    useEffect(() => {
+        if (pathname === '/') {
+            const handleScroll = () => {
+                const sections = ['home', 'about', 'services', 'portfolio', 'testimonials', 'contact'];
+                const scrollPosition = window.scrollY + 100;
+
+                for (const section of sections) {
+                    const element = document.getElementById(section);
+                    if (element) {
+                        const offsetTop = element.offsetTop;
+                        const offsetHeight = element.offsetHeight;
+                        
+                        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                            setActiveSection(section);
+                            break;
+                        }
+                    }
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Check initial position
+            
+            return () => window.removeEventListener('scroll', handleScroll);
+        }
+    }, [pathname]);
 
     const handleNavClick = (url: string) => {
         if (url.startsWith('#')) {
@@ -45,8 +74,12 @@ const Nav = ({ openNav }: Props) => {
 
     const isActiveLink = (url: string) => {
         if (url.startsWith('#')) {
-            // For anchor links, active only when on home page
-            return pathname === '/';
+            // For anchor links on home page, check if it matches current section
+            if (pathname === '/') {
+                const sectionId = url.substring(1); // Remove the #
+                return activeSection === sectionId;
+            }
+            return false;
         } else {
             // For page links, active when on that specific page
             return pathname === url;

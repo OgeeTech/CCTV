@@ -36,8 +36,11 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
 
     const isActiveLink = (url: string) => {
         if (url.startsWith('#')) {
-            // For anchor links, active only when on home page
-            return pathname === '/';
+            // For anchor links, only show Home as active on home page
+            if (pathname === '/') {
+                return url === '#home';
+            }
+            return false;
         } else {
             // For page links, active when on that specific page
             return pathname === url;
