@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaClock, FaPaperPlane } from 'react-icons/fa';
 
@@ -238,20 +239,6 @@ const Contact = () => {
                   )}
                 </button>
               </form>
-            </div>
-          </div>
-        </div>
-
-        {/* Map Section */}
-        <div className="mt-16">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="h-96 bg-gray-200 flex items-center justify-center">
-              <div className="text-center">
-                <FaMapMarkerAlt className="text-4xl text-rose-600 mx-auto mb-4" />
-                <h4 className="text-xl font-bold text-blue-950 mb-2">Find Us Here</h4>
-                <p className="text-gray-600">Suite 12, Plaza Complex, Bwari, Abuja</p>
-                <p className="text-sm text-gray-500 mt-2">Interactive map integration available</p>
-              </div>
             </div>
           </div>
         </div>
