@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { navLinks } from '@/constant/constant'
 import { CgClose } from 'react-icons/cg'
+import { useRouter } from 'next/navigation'
 
 type Props = {
     showNav: boolean;
@@ -10,6 +11,7 @@ type Props = {
 
 const MobileNav = ({ closeNav, showNav }: Props) => {
     const navOpen = showNav ? "translate-x-0" : "translate-x-[-100%]";
+    const router = useRouter();
 
     const handleNavClick = (url: string) => {
         if (url.startsWith('#')) {
@@ -18,6 +20,9 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
+        } else {
+            // For page links, navigate to the page
+            router.push(url);
         }
         closeNav(); // Close mobile nav after clicking
     };

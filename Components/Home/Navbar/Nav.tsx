@@ -4,6 +4,7 @@ import { AiOutlineVideoCamera } from 'react-icons/ai';
 import { navLinks } from '@/constant/constant'
 import { HiBars3BottomRight } from 'react-icons/hi2'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 type Props = {
     openNav: () => void
@@ -11,6 +12,7 @@ type Props = {
 
 const Nav = ({ openNav }: Props) => {
     const [navBg, setNavBg] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         const handler = () => {
@@ -28,6 +30,9 @@ const Nav = ({ openNav }: Props) => {
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
+        } else {
+            // For page links, navigate to the page
+            router.push(url);
         }
     };
 
@@ -35,12 +40,12 @@ const Nav = ({ openNav }: Props) => {
         <div className={` ${navBg ? 'bg-blue-950 shadow-md' : 'fixed'} transition-all duration-200 h-[12vh] z-[1000] fixed w-full`}>
             <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
                 {/* logo */}
-                <div className="flex items-center space-x-2">
+                <Link href="/" className="flex items-center space-x-2">
                     <div className="w-10 h-10 bg-rose-500 rounded-full flex items-center justify-center flex-col">
                         <AiOutlineVideoCamera className='w-6 h-6 text-white' />
                     </div>
                     <h1 className="text-xl md:text-2xl text-white uppercase font-bold">ACE Tech</h1>
-                </div>
+                </Link>
 
                 {/* Nav links */}
                 <div className="hidden lg:flex items-center space-x-10">

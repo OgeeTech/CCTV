@@ -6,10 +6,7 @@ import About from './About/About'
 import Services from './Services/Services'
 import Portfolio from './Portfolio/Portfolio'
 import Testimonials from './Testimonials/Testimonials'
-import FAQ from './FAQ/FAQ'
 import Contact from './Contact/Contact'
-import Shop from './Shop/Shop'
-import Blog from './Blog/Blog'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
@@ -44,15 +41,6 @@ const Home = () => {
            </section>
            <section id="testimonials">
                <Testimonials/>
-           </section>
-           <section id="shop">
-               <Shop/>
-           </section>
-           <section id="blog">
-               <Blog/>
-           </section>
-           <section id="faq">
-               <FAQ/>
            </section>
            <section id="contact">
                <Contact/>

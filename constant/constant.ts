@@ -22,12 +22,12 @@ export const navLinks = [
     },
     {
         id: 5,
-        url: "#shop",
+        url: "/shop",
         label: "Shop",
     },
     {
         id: 6,
-        url: "#blog",
+        url: "/blog",
         label: "Blog",
     },
     {
@@ -37,7 +37,7 @@ export const navLinks = [
     },
     {
         id: 8,
-        url: "#faq",
+        url: "/faq",
         label: "FAQ",
     },
     {
