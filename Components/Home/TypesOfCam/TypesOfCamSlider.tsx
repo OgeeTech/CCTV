@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import { destinationData } from '@/data/data';
 import Carousel from 'react-multi-carousel';

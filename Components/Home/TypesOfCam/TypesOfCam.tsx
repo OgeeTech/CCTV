@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import SectionHeading from '@/Components/Helper/SectionHeading'
 import TypesOfCamSlider from './TypesOfCamSlider';
