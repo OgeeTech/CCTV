@@ -26,20 +26,30 @@ const Nav = ({ openNav }: Props) => {
 
     const handleNavClick = (url: string) => {
         if (url.startsWith('#')) {
-            // For anchor links, check if we're on the home page
-            if (pathname === '/') {
+            // For anchor links, always navigate to home page first if not already there
+            if (pathname !== '/') {
+                // Navigate to home page with hash
+                router.push(`/${url}`);
+            } else {
                 // We're on home page, scroll to section
                 const element = document.querySelector(url);
                 if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                 }
-            } else {
-                // We're on a different page, navigate to home page with hash
-                router.push(`/${url}`);
             }
         } else {
             // For page links, navigate to the page
             router.push(url);
+        }
+    };
+
+    const isActiveLink = (url: string) => {
+        if (url.startsWith('#')) {
+            // For anchor links, active only when on home page
+            return pathname === '/';
+        } else {
+            // For page links, active when on that specific page
+            return pathname === url;
         }
     };
 
@@ -57,8 +67,7 @@ const Nav = ({ openNav }: Props) => {
                 {/* Nav links */}
                 <div className="hidden lg:flex items-center space-x-8">
                     {navLinks.map((link) => {
-                        const isActive = (link.url.startsWith('#') && pathname === '/') || 
-                                       (!link.url.startsWith('#') && pathname === link.url);
+                        const isActive = isActiveLink(link.url);
                         
                         return (
                             <button
