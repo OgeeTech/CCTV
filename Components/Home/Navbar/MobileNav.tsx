@@ -59,10 +59,14 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
                             <button
                                 key={link.id}
                                 onClick={() => handleNavClick(link.url)}
-                                className={`text-left w-fit text-[20px] ml-12 border-b-[1.5px] pb-1 border-white sm:text-[30px] transition-colors duration-300 ${
+                                className={`text-left w-fit text-[20px] ml-12 sm:text-[30px] transition-colors duration-300 relative ${
                                     isActive 
-                                        ? 'text-yellow-300 border-yellow-300' 
-                                        : 'text-white hover:text-yellow-300 hover:border-yellow-300'
+                                        ? 'text-yellow-300' 
+                                        : 'text-white hover:text-yellow-300'
+                                } after:content-[""] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 ${
+                                    isActive 
+                                        ? 'after:w-full' 
+                                        : 'after:w-0 hover:after:w-full'
                                 }`}
                             >
                                 {link.label}
