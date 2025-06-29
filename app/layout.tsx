@@ -12,13 +12,13 @@ const font = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "ACE Tech. Consult Ltd - Professional Security Camera Installation in Abuja",
-  description: "Professional CCTV installation, maintenance, and security solutions in Abuja. Expert technicians, quality equipment, 24/7 support. Secure your property today!",
-  keywords: "CCTV installation Abuja, security cameras Nigeria, surveillance systems, IP cameras, DVR installation, security solutions",
+  title: "ACE Tech. Consult Ltd - Professional Security Camera Installation in Abuja & Beyond",
+  description: "Professional CCTV installation, maintenance, and security solutions in Abuja and surrounding states. Expert technicians, quality equipment, 24/7 support. Secure your property today!",
+  keywords: "CCTV installation Abuja, security cameras Nigeria, surveillance systems, IP cameras, DVR installation, security solutions, Niger State, Kaduna State, Nasarawa State",
   authors: [{ name: "ACE Tech. Consult Ltd" }],
   openGraph: {
     title: "ACE Tech. Consult Ltd - Professional Security Solutions",
-    description: "Expert CCTV installation and security services in Abuja",
+    description: "Expert CCTV installation and security services in Abuja and surrounding states",
     type: "website",
   }
 };

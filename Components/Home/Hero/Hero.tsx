@@ -26,7 +26,7 @@ const Hero = () => {
                         </h1>
                         <p className='md:text-lg text-center text-xl text-white font-normal [word-spacing:5px] mb-8 max-w-3xl mx-auto leading-relaxed'>
                             Secure your property with our expert CCTV installation, maintenance, and monitoring services. 
-                            Trusted by 500+ customers across Abuja with 8+ years of experience.
+                            Trusted by 500+ customers across Abuja and surrounding states with 8+ years of experience.
                         </p>
                         
                         {/* Call-to-Action Buttons */}

@@ -45,7 +45,7 @@ const FAQ = () => {
     {
       id: 8,
       question: "What areas do you serve?",
-      answer: "We primarily serve Abuja and surrounding areas including Bwari, Gwarinpa, Kubwa, Kuje, Gwagwalada, and Abaji. Contact us to confirm service availability in your specific location."
+      answer: "We serve Abuja and surrounding states including Niger State, Kaduna State, and Nasarawa State. Contact us to confirm service availability in your specific location and discuss any travel arrangements if needed."
     },
     {
       id: 9,

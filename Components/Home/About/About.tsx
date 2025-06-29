@@ -11,10 +11,10 @@ const About = () => {
   ];
 
   const serviceAreas = [
-    "Bwari, Abuja",
-    "Gwarinpa, Abuja", 
-    "Kubwa, Abuja",
-    "Kuje, Abuja"
+    "Abuja & FCT",
+    "Niger State", 
+    "Kaduna State",
+    "Nasarawa State"
   ];
 
   return (
@@ -25,7 +25,7 @@ const About = () => {
             About ACE Tech. Consult Ltd
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Your trusted partner for comprehensive surveillance solutions with over 8 years of experience.
+            Your trusted partner for comprehensive surveillance solutions with over 8 years of experience serving Abuja and surrounding states.
           </p>
         </div>
 
@@ -37,7 +37,9 @@ const About = () => {
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
               We specialize in providing cutting-edge CCTV installation, maintenance, and security 
-              system solutions for homes, offices, and industrial facilities across Abuja.
+              system solutions for homes, offices, and industrial facilities across Abuja and 
+              surrounding states. Our team of certified technicians ensures your property is 
+              protected with the latest surveillance technology, no matter where you're located.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
@@ -54,7 +56,7 @@ const About = () => {
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-blue-950 mb-3">Service Areas</h4>
+                <h4 className="text-lg font-semibold text-blue-950 mb-3">Service Coverage</h4>
                 <div className="space-y-2">
                   {serviceAreas.map((area, index) => (
                     <div key={index} className="flex items-center space-x-2">
