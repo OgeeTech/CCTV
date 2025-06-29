@@ -4,49 +4,129 @@ export const destinationData = [
         id: 1,
         image: "https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg",
         country: "Dome Cameras",
-        travelers: "Indoor/Outdoor",
+        travelers: "Indoor/Outdoor Security",
+        features: [
+            "360° Coverage Capability",
+            "Vandal Resistant Design",
+            "Discreet Appearance",
+            "Night Vision Technology",
+            "Weather Resistant (IP66)"
+        ],
+        bestFor: "Retail stores, offices, and residential areas",
+        warranty: "2 Year Warranty",
+        priceRange: "35,000"
     },
     {
         id: 2,
         image: "https://images.pexels.com/photos/96612/pexels-photo-96612.jpeg",
         country: "Bullet Cameras",
-        travelers: "Long Range",
+        travelers: "Long Range Monitoring",
+        features: [
+            "Long Distance Viewing",
+            "Powerful Zoom Capabilities",
+            "Infrared Night Vision",
+            "Weatherproof Housing",
+            "Easy Installation"
+        ],
+        bestFor: "Perimeter security, parking lots, and entrances",
+        warranty: "2 Year Warranty",
+        priceRange: "28,000"
     },
     {
         id: 3,
         image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg",
         country: "PTZ Cameras",
-        travelers: "Pan/Tilt/Zoom",
+        travelers: "Pan/Tilt/Zoom Control",
+        features: [
+            "Remote Control Operation",
+            "360° Pan & 180° Tilt",
+            "Optical Zoom up to 30x",
+            "Auto Tracking Function",
+            "Preset Position Memory"
+        ],
+        bestFor: "Large areas, stadiums, and critical monitoring points",
+        warranty: "3 Year Warranty",
+        priceRange: "150,000"
     },
     {
         id: 4,
         image: "https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg",
         country: "IP Cameras",
-        travelers: "Network Based",
+        travelers: "Network Based Security",
+        features: [
+            "High Definition Video",
+            "Remote Internet Access",
+            "Motion Detection Alerts",
+            "Cloud Storage Compatible",
+            "Mobile App Integration"
+        ],
+        bestFor: "Modern homes, offices, and smart buildings",
+        warranty: "2 Year Warranty",
+        priceRange: "45,000"
     },
     {
         id: 5,
         image: "https://images.pexels.com/photos/7005538/pexels-photo-7005538.jpeg",
         country: "Wireless Cameras",
-        travelers: "Easy Install",
+        travelers: "Easy Installation",
+        features: [
+            "No Cable Installation",
+            "Battery or Solar Powered",
+            "WiFi Connectivity",
+            "Quick Setup Process",
+            "Portable & Flexible"
+        ],
+        bestFor: "Temporary monitoring, remote locations, and rentals",
+        warranty: "1 Year Warranty",
+        priceRange: "25,000"
     },
     {
         id: 6,
         image: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg",
-        country: "Night Vision",
+        country: "Night Vision Cameras",
         travelers: "24/7 Monitoring",
+        features: [
+            "Infrared LED Technology",
+            "Clear Night Recording",
+            "Automatic Day/Night Mode",
+            "Long Range IR Distance",
+            "Low Light Performance"
+        ],
+        bestFor: "24/7 security, warehouses, and outdoor areas",
+        warranty: "2 Year Warranty",
+        priceRange: "38,000"
     },
     {
         id: 7,
         image: "https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg",
         country: "Hidden Cameras",
         travelers: "Discreet Security",
+        features: [
+            "Covert Surveillance",
+            "Miniature Design",
+            "High Quality Recording",
+            "Motion Activated",
+            "Long Battery Life"
+        ],
+        bestFor: "Covert monitoring, nanny cams, and investigation",
+        warranty: "1 Year Warranty",
+        priceRange: "20,000"
     },
     {
         id: 8,
         image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
-        country: "4K Ultra HD",
-        travelers: "Crystal Clear",
+        country: "4K Ultra HD Cameras",
+        travelers: "Crystal Clear Quality",
+        features: [
+            "Ultra High Definition",
+            "4x Better Than 1080p",
+            "Digital Zoom Clarity",
+            "Professional Grade",
+            "Future-Proof Technology"
+        ],
+        bestFor: "High-security areas, banks, and premium installations",
+        warranty: "3 Year Warranty",
+        priceRange: "85,000"
     },
 ];
 
