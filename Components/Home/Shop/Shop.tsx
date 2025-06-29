@@ -1,12 +1,17 @@
 'use client';
-
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaShoppingCart, FaEye, FaStar, FaFilter } from 'react-icons/fa';
+import { useCart } from '@/contexts/CartContext';
+import CartSidebar from '@/Components/Shop/CartSidebar';
+import CheckoutModal from '@/Components/Shop/CheckoutModal';
 
 const Shop = () => {
+  const { state, addToCart } = useCart();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [cartSidebarOpen, setCartSidebarOpen] = useState(false);
+  const [checkoutModalOpen, setCheckoutModalOpen] = useState(false);
 
   const categories = [
     { id: 'all', label: 'All Products' },
@@ -136,6 +141,22 @@ const Shop = () => {
     ));
   };
 
+  const handleAddToCart = (product: any) => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      originalPrice: product.originalPrice,
+      image: product.image,
+      category: product.category,
+      inStock: product.inStock
+    });
+    
+    // Show cart sidebar briefly
+    setCartSidebarOpen(true);
+    setTimeout(() => setCartSidebarOpen(false), 2000);
+  };
+
   const openProductModal = (product: any) => {
     setSelectedProduct(product);
   };
@@ -144,17 +165,38 @@ const Shop = () => {
     setSelectedProduct(null);
   };
 
+  const handleCheckout = () => {
+    setCartSidebarOpen(false);
+    setCheckoutModalOpen(true);
+  };
+
   return (
     <div className="py-20 bg-gray-50">
       <div className="w-[90%] xl:w-[80%] mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">
-            Security Equipment Shop
-          </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Browse our selection of high-quality security cameras, DVR/NVR systems, and accessories. 
-            All products come with warranty and professional installation support.
-          </p>
+        {/* Header with Cart Button */}
+        <div className="flex justify-between items-center mb-16">
+          <div className="text-center flex-1">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">
+              Security Equipment Shop
+            </h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Browse our selection of high-quality security cameras, DVR/NVR systems, and accessories. 
+              All products come with warranty and professional installation support.
+            </p>
+          </div>
+          
+          {/* Cart Button */}
+          <button
+            onClick={() => setCartSidebarOpen(true)}
+            className="relative bg-rose-600 hover:bg-rose-700 text-white p-3 rounded-full transition-colors duration-300 ml-4"
+          >
+            <FaShoppingCart className="text-xl" />
+            {state.itemCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-yellow-400 text-blue-950 text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                {state.itemCount}
+              </span>
+            )}
+          </button>
         </div>
 
         {/* Category Filter */}
@@ -253,6 +295,7 @@ const Shop = () => {
                 </ul>
 
                 <button
+                  onClick={() => handleAddToCart(product)}
                   disabled={!product.inStock}
                   className={`w-full py-2 px-4 rounded-lg font-medium transition-colors duration-300 flex items-center justify-center ${
                     product.inStock
@@ -326,6 +369,10 @@ const Shop = () => {
 
                   <div className="flex space-x-4">
                     <button
+                      onClick={() => {
+                        handleAddToCart(selectedProduct);
+                        closeProductModal();
+                      }}
                       disabled={!selectedProduct.inStock}
                       className={`flex-1 py-3 px-6 rounded-lg font-medium transition-colors duration-300 ${
                         selectedProduct.inStock
@@ -359,6 +406,19 @@ const Shop = () => {
           </div>
         </div>
       </div>
+
+      {/* Cart Sidebar */}
+      <CartSidebar
+        isOpen={cartSidebarOpen}
+        onClose={() => setCartSidebarOpen(false)}
+        onCheckout={handleCheckout}
+      />
+
+      {/* Checkout Modal */}
+      <CheckoutModal
+        isOpen={checkoutModalOpen}
+        onClose={() => setCheckoutModalOpen(false)}
+      />
     </div>
   );
 };

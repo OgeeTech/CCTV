@@ -6,6 +6,7 @@ import ScrollToTop from '@/Components/Helper/ScrollToTop'
 import LiveChat from '@/Components/Helper/LiveChat'
 import StickyButtons from '@/Components/Helper/StickyButtons'
 import Footer from '@/Components/Home/Footer/Footer'
+import { CartProvider } from '@/contexts/CartContext'
 
 const font = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -32,12 +33,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${font.className} antialiased`}>
-        <ResponsiveNav/>
-        {children}
-        <Footer/>
-        <ScrollToTop/>
-        <LiveChat/>
-        <StickyButtons/>
+        <CartProvider>
+          <ResponsiveNav/>
+          {children}
+          <Footer/>
+          <ScrollToTop/>
+          <LiveChat/>
+          <StickyButtons/>
+        </CartProvider>
       </body>
     </html>
   );
