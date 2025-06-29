@@ -1,22 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import { FaCheckCircle, FaCertificate, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaCheckCircle } from 'react-icons/fa';
 
 const About = () => {
-  const certifications = [
-    "CCTV Installation Certified",
-    "Network Security Specialist",
-    "IP Camera Configuration Expert",
-    "Access Control Systems Certified"
-  ];
-
-  const serviceAreas = [
-    "All 36 States + FCT",
-    "Lagos, Kano, Rivers", 
-    "Ogun, Oyo, Delta",
-    "Kaduna, Plateau, Edo"
-  ];
-
   return (
     <div className="py-20 bg-gray-50">
       <div className="w-[90%] xl:w-[80%] mx-auto">
@@ -42,33 +28,7 @@ const About = () => {
               surveillance technology, from Lagos to Kano, Port Harcourt to Abuja, and everywhere in between.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-              <div>
-                <h4 className="text-lg font-semibold text-blue-950 mb-3">Certifications</h4>
-                <div className="space-y-2">
-                  {certifications.slice(0, 2).map((cert, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <FaCertificate className="text-rose-600 text-sm" />
-                      <span className="text-gray-700 text-sm">{cert}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-semibold text-blue-950 mb-3">Nationwide Coverage</h4>
-                <div className="space-y-2">
-                  {serviceAreas.map((area, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <FaMapMarkerAlt className="text-rose-600 text-sm" />
-                      <span className="text-gray-700 text-sm">{area}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap gap-6 mb-8">
               <div className="text-center">
                 <h5 className="text-2xl font-bold text-rose-600">1000+</h5>
                 <p className="text-gray-600 text-sm">Projects Nationwide</p>
