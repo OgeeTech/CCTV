@@ -8,6 +8,7 @@ const Contact = () => {
     email: '',
     phone: '',
     service: '',
+    state: '',
     message: ''
   });
 
@@ -33,6 +34,7 @@ const Contact = () => {
         email: '',
         phone: '',
         service: '',
+        state: '',
         message: ''
       });
       setIsSubmitting(false);
@@ -60,7 +62,7 @@ const Contact = () => {
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl text-red-600" />,
-      title: "Office Address",
+      title: "Headquarters",
       details: ["Suite 12, Plaza Complex", "Bwari, Abuja, Nigeria"],
       action: "#"
     },
@@ -72,6 +74,14 @@ const Contact = () => {
     }
   ];
 
+  const nigerianStates = [
+    "Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", 
+    "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "FCT Abuja", "Gombe", 
+    "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", 
+    "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", 
+    "Taraba", "Yobe", "Zamfara"
+  ];
+
   return (
     <div className="py-20 bg-gray-50">
       <div className="w-[90%] xl:w-[80%] mx-auto">
@@ -81,7 +91,7 @@ const Contact = () => {
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             Ready to secure your property? Contact us today for a free consultation and quote. 
-            We're here to help you choose the perfect security solution.
+            We serve all 36 states in Nigeria and are here to help you choose the perfect security solution.
           </p>
         </div>
 
@@ -103,6 +113,20 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Service Coverage */}
+            <div className="mt-8 bg-blue-950 rounded-lg p-6 text-white">
+              <h4 className="font-bold text-lg mb-3">🇳🇬 Nationwide Coverage</h4>
+              <p className="text-blue-200 text-sm mb-4">
+                We provide professional CCTV installation and security services across all 36 states in Nigeria plus the Federal Capital Territory.
+              </p>
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div>Lagos • Kano • Rivers</div>
+                <div>Ogun • Oyo • Delta</div>
+                <div>Kaduna • Plateau • Edo</div>
+                <div>+ 27 More States</div>
+              </div>
             </div>
 
             {/* Quick Action Buttons */}
@@ -184,25 +208,44 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                      Service Needed
+                    <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-2">
+                      State/Location *
                     </label>
                     <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
+                      id="state"
+                      name="state"
+                      value={formData.state}
                       onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all duration-300"
                     >
-                      <option value="">Select a service</option>
-                      <option value="cctv-installation">CCTV Installation</option>
-                      <option value="maintenance">Maintenance & Repair</option>
-                      <option value="upgrade">System Upgrade</option>
-                      <option value="remote-monitoring">Remote Monitoring</option>
-                      <option value="access-control">Access Control</option>
-                      <option value="alarm-systems">Alarm Systems</option>
+                      <option value="">Select your state</option>
+                      {nigerianStates.map((state) => (
+                        <option key={state} value={state}>{state}</option>
+                      ))}
                     </select>
                   </div>
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    Service Needed
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all duration-300"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="cctv-installation">CCTV Installation</option>
+                    <option value="maintenance">Maintenance & Repair</option>
+                    <option value="upgrade">System Upgrade</option>
+                    <option value="remote-monitoring">Remote Monitoring</option>
+                    <option value="access-control">Access Control</option>
+                    <option value="alarm-systems">Alarm Systems</option>
+                  </select>
                 </div>
 
                 <div>
@@ -217,7 +260,7 @@ const Contact = () => {
                     required
                     rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all duration-300 resize-none"
-                    placeholder="Tell us about your security needs..."
+                    placeholder="Tell us about your security needs and location details..."
                   ></textarea>
                 </div>
 

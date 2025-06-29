@@ -11,10 +11,10 @@ const About = () => {
   ];
 
   const serviceAreas = [
-    "Abuja & FCT",
-    "Niger State", 
-    "Kaduna State",
-    "Nasarawa State"
+    "All 36 States + FCT",
+    "Lagos, Kano, Rivers", 
+    "Ogun, Oyo, Delta",
+    "Kaduna, Plateau, Edo"
   ];
 
   return (
@@ -25,7 +25,7 @@ const About = () => {
             About ACE Tech. Consult Ltd
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Your trusted partner for comprehensive surveillance solutions with over 8 years of experience serving Abuja and surrounding states.
+            Your trusted partner for comprehensive surveillance solutions with over 8 years of experience serving all 36 states in Nigeria and the Federal Capital Territory.
           </p>
         </div>
 
@@ -37,9 +37,9 @@ const About = () => {
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
               We specialize in providing cutting-edge CCTV installation, maintenance, and security 
-              system solutions for homes, offices, and industrial facilities across Abuja and 
-              surrounding states. Our team of certified technicians ensures your property is 
-              protected with the latest surveillance technology, no matter where you're located.
+              system solutions for homes, offices, and industrial facilities across all states in Nigeria. 
+              Our team of certified technicians ensures your property is protected with the latest 
+              surveillance technology, from Lagos to Kano, Port Harcourt to Abuja, and everywhere in between.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
@@ -56,7 +56,7 @@ const About = () => {
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-blue-950 mb-3">Service Coverage</h4>
+                <h4 className="text-lg font-semibold text-blue-950 mb-3">Nationwide Coverage</h4>
                 <div className="space-y-2">
                   {serviceAreas.map((area, index) => (
                     <div key={index} className="flex items-center space-x-2">
@@ -70,8 +70,8 @@ const About = () => {
 
             <div className="flex flex-wrap gap-6">
               <div className="text-center">
-                <h5 className="text-2xl font-bold text-rose-600">500+</h5>
-                <p className="text-gray-600 text-sm">Projects Completed</p>
+                <h5 className="text-2xl font-bold text-rose-600">1000+</h5>
+                <p className="text-gray-600 text-sm">Projects Nationwide</p>
               </div>
               <div className="text-center">
                 <h5 className="text-2xl font-bold text-rose-600">8+</h5>
@@ -101,8 +101,8 @@ const About = () => {
               <div className="flex items-center space-x-3">
                 <FaCheckCircle className="text-green-500 text-2xl" />
                 <div>
-                  <h6 className="font-bold text-blue-950">Licensed & Insured</h6>
-                  <p className="text-gray-600 text-sm">Fully certified technicians</p>
+                  <h6 className="font-bold text-blue-950">Nationwide Service</h6>
+                  <p className="text-gray-600 text-sm">All 36 States + FCT</p>
                 </div>
               </div>
             </div>

@@ -9,56 +9,74 @@ const Testimonials = () => {
     {
       id: 1,
       name: "Adebayo Johnson",
-      location: "Gwarinpa, Abuja",
+      location: "Lagos State",
       rating: 5,
-      review: "Excellent service! The team installed our home CCTV system professionally and explained everything clearly. The remote monitoring feature gives us peace of mind when we're away.",
+      review: "Excellent service! The team traveled from Abuja to Lagos and installed our home CCTV system professionally. The remote monitoring feature gives us peace of mind when we're away.",
       image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
       project: "Residential CCTV Installation"
     },
     {
       id: 2,
       name: "Mrs. Sarah Okafor",
-      location: "Kubwa, Abuja",
+      location: "Kano State",
       rating: 5,
-      review: "I'm thoroughly impressed with their professionalism and attention to detail. They upgraded our old analog system to IP cameras, and the difference in quality is amazing!",
+      review: "I'm thoroughly impressed with their nationwide service. They upgraded our old analog system to IP cameras in Kano, and the difference in quality is amazing! Professional team.",
       image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
       project: "System Upgrade"
     },
     {
       id: 3,
       name: "Michael Emeka",
-      location: "Bwari, Abuja",
+      location: "Rivers State",
       rating: 5,
-      review: "Outstanding work! They installed CCTV cameras for our office building and provided excellent after-sales support. Highly recommend their services to anyone.",
+      review: "Outstanding work! They installed CCTV cameras for our office building in Port Harcourt and provided excellent after-sales support. Truly a nationwide service provider.",
       image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg",
       project: "Commercial Installation"
     },
     {
       id: 4,
       name: "Dr. Fatima Aliyu",
-      location: "Kuje, Abuja",
+      location: "Kaduna State",
       rating: 5,
-      review: "Professional, reliable, and affordable. The team was punctual and completed the installation within the promised timeframe. The system works perfectly!",
+      review: "Professional, reliable, and affordable. The team was punctual and completed the installation within the promised timeframe. Great to have nationwide coverage!",
       image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg",
       project: "Medical Facility Security"
     },
     {
       id: 5,
       name: "Chief Emmanuel Okoro",
-      location: "Gwagwalada, Abuja",
+      location: "Delta State",
       rating: 5,
-      review: "Exceptional service from start to finish! They provided a comprehensive security solution for our warehouse. The 24/7 monitoring capability is exactly what we needed.",
+      review: "Exceptional service from start to finish! They provided a comprehensive security solution for our warehouse in Warri. The 24/7 monitoring capability is exactly what we needed.",
       image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg",
       project: "Industrial Surveillance"
     },
     {
       id: 6,
       name: "Grace Nnamdi",
-      location: "Abaji, Abuja",
+      location: "Enugu State",
       rating: 5,
-      review: "Amazing experience! The technicians were knowledgeable and patient in explaining how to use the system. The mobile app makes monitoring so convenient.",
+      review: "Amazing experience! The technicians were knowledgeable and patient in explaining how to use the system. Great to have a company that serves all states in Nigeria.",
       image: "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg",
       project: "Smart Home Integration"
+    },
+    {
+      id: 7,
+      name: "Alhaji Musa Ibrahim",
+      location: "Sokoto State",
+      rating: 5,
+      review: "Impressed with their commitment to serve even remote areas. They came all the way to Sokoto and delivered excellent service. Truly nationwide coverage as promised!",
+      image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
+      project: "Residential Security"
+    },
+    {
+      id: 8,
+      name: "Mrs. Blessing Okon",
+      location: "Cross River State",
+      rating: 5,
+      review: "Professional installation in Calabar with excellent customer service. They handled logistics perfectly and delivered on all promises. Highly recommend their services!",
+      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+      project: "Hotel Security System"
     }
   ];
 
@@ -97,7 +115,7 @@ const Testimonials = () => {
             What Our Clients Say
           </h2>
           <p className="text-blue-200 text-lg max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied customers have to say about our services.
+            Don't just take our word for it. Here's what our satisfied customers from across Nigeria have to say about our nationwide services.
           </p>
         </div>
 
@@ -147,12 +165,12 @@ const Testimonials = () => {
         {/* Trust Indicators */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 text-center">
           <div>
-            <h3 className="text-3xl font-bold text-white mb-2">500+</h3>
+            <h3 className="text-3xl font-bold text-white mb-2">1000+</h3>
             <p className="text-blue-200">Happy Customers</p>
           </div>
           <div>
-            <h3 className="text-3xl font-bold text-white mb-2">8+</h3>
-            <p className="text-blue-200">Years Experience</p>
+            <h3 className="text-3xl font-bold text-white mb-2">36+</h3>
+            <p className="text-blue-200">States Served</p>
           </div>
           <div>
             <h3 className="text-3xl font-bold text-white mb-2">24/7</h3>

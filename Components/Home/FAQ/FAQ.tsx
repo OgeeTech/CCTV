@@ -44,18 +44,28 @@ const FAQ = () => {
     },
     {
       id: 8,
-      question: "What areas do you serve?",
-      answer: "We serve Abuja and surrounding states including Niger State, Kaduna State, and Nasarawa State. Contact us to confirm service availability in your specific location and discuss any travel arrangements if needed."
+      question: "Do you really serve all states in Nigeria?",
+      answer: "Yes! We provide professional CCTV installation and security services across all 36 states in Nigeria plus the Federal Capital Territory. Our team travels nationwide to serve our customers, from Lagos to Kano, Port Harcourt to Maiduguri."
     },
     {
       id: 9,
       question: "Do you provide 24/7 support?",
-      answer: "We offer 24/7 emergency support for critical issues. For non-emergency support, our regular hours are Monday-Saturday 8AM-6PM. Emergency support may incur additional charges."
+      answer: "We offer 24/7 emergency support for critical issues. For non-emergency support, our regular hours are Monday-Saturday 8AM-6PM. Emergency support may incur additional charges depending on location."
     },
     {
       id: 10,
-      question: "How do I choose the right number of cameras?",
-      answer: "The number of cameras depends on your property size, layout, and security goals. During our free consultation, we'll assess your property and recommend optimal camera placement and quantities for maximum coverage."
+      question: "How do you handle installations in remote areas?",
+      answer: "We have experience working in remote locations across Nigeria. We coordinate logistics, accommodation, and transportation as needed. Travel and accommodation costs may apply for distant locations, which we'll discuss during consultation."
+    },
+    {
+      id: 11,
+      question: "What about power supply issues in Nigeria?",
+      answer: "We understand Nigeria's power challenges and provide solutions including UPS backup systems, solar power options, and low-power consumption equipment. We'll design a system that works reliably with your local power situation."
+    },
+    {
+      id: 12,
+      question: "Do you provide training on system usage?",
+      answer: "Yes! We provide comprehensive training on how to operate your CCTV system, including mobile app usage, playback functions, and basic troubleshooting. We also provide user manuals and ongoing support."
     }
   ];
 
@@ -71,7 +81,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Get answers to common questions about our CCTV installation and security services.
+            Get answers to common questions about our nationwide CCTV installation and security services across all 36 states in Nigeria.
           </p>
         </div>
 
@@ -119,7 +129,7 @@ const FAQ = () => {
             <div className="bg-blue-950 rounded-xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
               <p className="mb-6">
-                Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
+                Can't find the answer you're looking for? Our team is here to help you with any questions about our nationwide services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

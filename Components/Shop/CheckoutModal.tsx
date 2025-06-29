@@ -23,6 +23,14 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose }) => {
     notes: ''
   });
 
+  const nigerianStates = [
+    "Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", 
+    "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "FCT Abuja", "Gombe", 
+    "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", 
+    "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", 
+    "Taraba", "Yobe", "Zamfara"
+  ];
+
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-NG', {
       style: 'currency',
@@ -215,10 +223,9 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose }) => {
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
                       >
                         <option value="">Select State</option>
-                        <option value="FCT">FCT Abuja</option>
-                        <option value="Niger">Niger State</option>
-                        <option value="Kaduna">Kaduna State</option>
-                        <option value="Nasarawa">Nasarawa State</option>
+                        {nigerianStates.map((state) => (
+                          <option key={state} value={state}>{state}</option>
+                        ))}
                       </select>
                     </div>
                   </div>
@@ -261,7 +268,7 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose }) => {
             <FaCheckCircle className="text-6xl text-green-500 mx-auto mb-6" />
             <h2 className="text-3xl font-bold text-blue-950 mb-4">Order Placed Successfully!</h2>
             <p className="text-gray-600 mb-6 max-w-md mx-auto">
-              Thank you for your order! We'll contact you within 24 hours to confirm your order and arrange delivery/installation.
+              Thank you for your order! We'll contact you within 24 hours to confirm your order and arrange delivery/installation to your location.
             </p>
             
             <div className="bg-blue-50 rounded-lg p-6 mb-6 max-w-md mx-auto">
@@ -271,6 +278,7 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose }) => {
                 <li>• Payment instructions will be provided</li>
                 <li>• Delivery/installation will be scheduled</li>
                 <li>• You'll receive order updates via WhatsApp</li>
+                <li>• Our team will coordinate logistics for your state</li>
               </ul>
             </div>
 

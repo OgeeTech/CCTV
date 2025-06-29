@@ -20,6 +20,13 @@ const Footer = () => {
     'Access Control'
   ];
 
+  const coverageAreas = [
+    'Lagos • Kano • Rivers',
+    'Ogun • Oyo • Delta', 
+    'Kaduna • Plateau • Edo',
+    'All 36 States + FCT'
+  ];
+
   return (
     <footer className="bg-blue-950 text-white">
       <div className="w-[90%] xl:w-[80%] mx-auto py-16">
@@ -33,7 +40,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold">ACE Tech. Consult Ltd</h3>
             </div>
             <p className="text-blue-200 mb-6 leading-relaxed">
-              Your trusted partner for professional CCTV installation and security solutions across Abuja and surrounding states.
+              Your trusted partner for professional CCTV installation and security solutions across all 36 states in Nigeria and the Federal Capital Territory.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-blue-200 hover:text-white transition-colors duration-300">
@@ -77,10 +84,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact & Coverage */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
-            <div className="space-y-4">
+            <h4 className="text-lg font-semibold mb-6">Contact & Coverage</h4>
+            <div className="space-y-4 mb-6">
               <div className="flex items-center space-x-3">
                 <FaPhone className="text-rose-500" />
                 <a href="tel:+2348060610584" className="text-blue-200 hover:text-white transition-colors duration-300">
@@ -99,11 +106,16 @@ const Footer = () => {
                   WhatsApp Us
                 </a>
               </div>
-              <div className="flex items-start space-x-3">
-                <FaMapMarkerAlt className="text-rose-500 mt-1" />
-                <span className="text-blue-200">
-                  Abuja & Surrounding States
-                </span>
+            </div>
+            
+            <div>
+              <h5 className="text-sm font-semibold mb-3 text-yellow-300">🇳🇬 Nationwide Coverage</h5>
+              <div className="space-y-1">
+                {coverageAreas.map((area, index) => (
+                  <div key={index} className="text-blue-200 text-xs">
+                    {area}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -115,7 +127,7 @@ const Footer = () => {
         <div className="w-[90%] xl:w-[80%] mx-auto py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-blue-200 text-sm mb-4 md:mb-0">
-              © 2025 ACE Tech. Consult Ltd. All rights reserved.
+              © 2025 ACE Tech. Consult Ltd. All rights reserved. | Serving all 36 States + FCT
             </p>
             <div className="flex items-center space-x-4 text-sm">
               <Link href="/privacy" className="text-blue-200 hover:text-white transition-colors duration-300">

@@ -26,7 +26,7 @@ const Hero = () => {
                         </h1>
                         <p className='md:text-lg text-center text-xl text-white font-normal [word-spacing:5px] mb-8 max-w-3xl mx-auto leading-relaxed'>
                             Secure your property with our expert CCTV installation, maintenance, and monitoring services. 
-                            Trusted by 500+ customers across Abuja and surrounding states with 8+ years of experience.
+                            Trusted by 1000+ customers across all 36 states in Nigeria with 8+ years of experience.
                         </p>
                         
                         {/* Call-to-Action Buttons */}
@@ -42,12 +42,12 @@ const Hero = () => {
                         {/* Quick Stats */}
                         <div className='grid grid-cols-3 gap-8 mt-12 max-w-md mx-auto'>
                             <div className='text-center'>
-                                <h3 className='text-2xl font-bold text-rose-400'>500+</h3>
+                                <h3 className='text-2xl font-bold text-rose-400'>1000+</h3>
                                 <p className='text-sm text-blue-200'>Projects</p>
                             </div>
                             <div className='text-center'>
-                                <h3 className='text-2xl font-bold text-rose-400'>8+</h3>
-                                <p className='text-sm text-blue-200'>Years</p>
+                                <h3 className='text-2xl font-bold text-rose-400'>36+</h3>
+                                <p className='text-sm text-blue-200'>States Served</p>
                             </div>
                             <div className='text-center'>
                                 <h3 className='text-2xl font-bold text-rose-400'>24/7</h3>
